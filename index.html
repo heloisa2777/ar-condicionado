@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mundo das Flores</title>
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(136, 192, 232);
+            color: rgb(237, 239, 237);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+       
+        header {
+            background-color: rgb(47, 5, 103);
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 24px;
+            color: #ece8f9;
+        }
+        img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            border: 4px solid rgb(47, 5, 103);
+            margin: 20px 0;
+        }
+        ul {
+            list-style-position: inside;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .card {
+            background: rgb(130, 87, 217);
+            width: 600px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            margin: 20px auto;
+            text-align: center;
+        }
+      
+        button {
+            background-color: rgb(47, 5, 103);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: rgb(73, 83, 173);
+        }
+        
+        .meu-botao {
+            margin: 20px auto;
+        }
+        .meu-botao a {
+            display: inline-block;
+            background-color: rgb(47, 5, 103);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .meu-botao a:hover {
+            background-color: rgb(44, 84, 203);
+            transform: scale(1.05);
+        }
+       
+        footer {
+            background-color: rgb(31, 3, 69);
+            width: 100%;
+            padding: 15px;
+            margin-top: auto;
+        }
+        footer p {
+            font-size: 14px;
+            color: rgb(190, 170, 230);
+        }
+    </style>
+</head>
+<body>
+
+   
+    <header>
+        <h1>Portal Botânico Viva Flora</h1>
+    </header>
+
+
+
+
+
+
+    <div class="card">
+        <p id="texto">Descubra os segredos da botânica!</p>
+        <button onclick="mudar()">Ver mensagem de boas-vindas</button>
+    </div>
+
+    <div class="card">
+        <img src="flor.img" alt="foto de flores azuis" ondblclick="alert('A imagem mostra flores do gênero Myosotis (família Boraginaceae), muito comuns em jardins e de floração delicada.');">
+        <p>Dê dois cliques na imagem para conhecer mais sobre essa flor.</p>
+    </div>
+
+    <div class="card">
+        <h2>O Mundo das Flores</h2>
+        <ul>
+            <li><strong>Clima Ideal:</strong> A maioria das espécies prefere locais com boa iluminação solar diária.</li>
+            <li><strong>Rega Correta:</strong> Evite encharcar a terra para manter as raízes saudáveis e fortes.</li>
+            <li><strong>Curiosidade:</strong> A planta do abacaxi produz lindas flores roxas antes do fruto se formar.</li>
+            <li><strong>Polinização:</strong> As cores vivas das pétalas servem para atrair abelhas e borboletas.</li>
+        </ul>
+    </div>
+
+   
+    <div class="card">
+        <p id="texto-colorido" class="colorido">As flores coloridas alegram o nosso dia!</p>
+        <button onclick="mudarTudo()">Descobrir uma dica.</button>
+    </div>
+
+    <div class="meu-botao">
+        <a href="https://homeflora.pt" target="_blank">Clique Aqui para saber mais</a>
+    </div>
+
+
+
+
+
+    <script>
+        function mudar(){
+            document.getElementById("texto").innerText = "Bem vindo ao site, Tudo das flores!";
+        }
+
+
+        function mudarTudo() {
+            const texto = document.getElementById("texto-colorido");
+            texto.style.color = "#151E3D";
+            texto.style.fontWeight = "bold";
+            texto.innerText = "Para garantir a máxima durabilidade de qualquer flor, limpe o vaso meticulosamente, corte os caules em um ângulo de 45 graus sob água corrente para evitar bolhas de ar e substitua a água por uma opção fresca e limpa a cada dois dias, removendo sempre as folhas que ficarem submersas para impedir a proliferação de bactérias.";
+        }
+    </script>
+
+
+
+    <footer>
+        <p>&copy; 2026 - Minha página | Desenvolvido para saber mais de flores.</p>
+    </footer>
+
+
+
+
+</body>
+</html>
